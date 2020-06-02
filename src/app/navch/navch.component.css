@@ -1,0 +1,314 @@
+/* Challenge
+
+   Make the navigation layout work
+   on both mobile and large screens.
+
+   Mobile-first, so mobile styles first,
+   then add the large screen styles
+   inside the existing media query
+
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.section-title {
+    color: #87629A;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #23424A;
+    font-weight: 900;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* added for nav-toggle positioning */
+    position: relative;
+}
+
+header {
+    background: #136c72;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.nav {
+    width: 100%;
+}
+
+
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: #072A2D;
+    color: white;
+    transition: opacity 250ms ease;
+    
+    position: absolute;
+    left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: .75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+/* made changes here from video
+   to make it more accessible.
+   
+   Works the same :) */
+.nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+}
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+} 
+.nav__item{
+    margin-top: .5em;
+    font-size: 1rem;
+}
+.nav__list{
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+}
+.nav__list--primary{
+    margin-bottom: 2em;
+}
+/* margin top and bottom will not work on links since they are
+inline items */
+.nav__link{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.nav__link:hover,
+.nav__link:focus{
+    opacity: .50;
+}
+
+.nav__link--button{
+    border-radius: 10em;
+    background-color: #ffffff;
+    padding: .3em .7em;
+    color: #136c72;
+    font-weight: bold;
+}
+.logo {
+    height: 30px;
+}
+
+
+.hero {
+    padding: 100px 0;
+    background-color: #23424A;
+    color: #FFF;
+}
+
+.hero__img {
+    margin-top: 2em;
+}
+
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.main {
+    margin-top: 3em;
+}
+
+
+.sidebar {
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #136c72;
+
+}
+
+
+
+@media (min-width: 800px) {
+
+    
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        display: flex;
+      
+        justify-content: space-between;
+        height: auto;
+        position: relative;
+    }
+    .nav__list{
+        display: flex;
+        /* border: 2px solid red; */
+     }
+
+     .nav__list--primary{
+         margin: 0 auto;
+     }
+     .nav__item + .nav__item{
+         margin-left: 1em;
+     }
+     /* when position is overlaping or close to bottom, check margins.
+     most cases is solve removing them margin: 0 */
+     .nav__item{
+         margin: 0;
+     }
+    .row {
+        display: flex;
+        justify-content: space-between;
+        /* border: 2px solid blue; */
+    }
+
+    .hero__text {
+        width: 62%;
+    }
+    
+    .hero__img {
+        width: 32%;
+        align-self: flex-start;
+        margin: 0;
+    }
+    
+    .primary-content {
+        width: 62%;
+    }
+
+    .sidebar {
+        width: 32%;
+    }
+    
+    
+}
+
+
+
+
+.stickyContainer{
+    display: flex;
+    flex-direction: column;
+}
+.col{
+    justify-content: space-between;
+    border: 2px solid black;
+}
+.col + .col{
+    margin: 10px 0;
+}
+.sticky{
+    position: sticky;
+    top:0;
+}
+#sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    background: #f83d23;
+    width: 100px;
+    height: 100px;
+    top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 0 0 6px #000;
+    color: blue;
+  }
+  .extra,
+  #wrapper {
+    width: 75%;
+    margin: auto;
+    background-color: yellow;
+  }
+  #wrapper {
+    height: 800px;
+  }
+  .extra {
+    height: 100px;
+  }
+  body {
+    font-family: georgia;
+    height: 1000px;
+  }
+  h4 {
+    text-align: center;
+  }
+  @media (min-height: 768px) {
+    #wrapper{
+      height: 2000px;
+    }
+  }
+  
+  

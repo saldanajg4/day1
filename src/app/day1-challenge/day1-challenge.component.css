@@ -1,0 +1,41 @@
+* { box-sizing: border-box; }
+
+/* this code text overflows when small size and we want to marke
+it all the way to the mid-point */
+/* body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    background: #23424A;
+    color: white;
+
+    width: 80%;
+    margin: 0 auto;
+    
+    padding: 2em;
+    height: 300px;
+} */
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* issue in width on very large monitors, the text will be wide if we don't
+specify a max-width.  It will stop growing even our viewport is growing */
+/* there is also min-width but could cause problems with responsiveness */
+.container {
+    background: #23424A;
+    color: white;
+
+    width: 80%;
+    max-width: 850px;
+    margin: 0 auto;
+    
+    padding: 5em;
+    /* height: 300px; */
+}
+.intro-content{
+    width: 50%;
+}

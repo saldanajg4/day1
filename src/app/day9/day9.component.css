@@ -1,0 +1,160 @@
+/* img{
+     width: 100%; 
+} */
+
+
+/* font-family: 'Roboto', sans-serif;
+
+font-family: 'Roboto Condensed', sans-serif; */
+
+
+h1{
+    margin-top: 0;
+    line-height: 1.1;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    /* border: solid 1px pink; */
+   
+}
+/* .main-container{
+    border: solid 1px black;
+} */
+header{
+    background: #136c72;
+    padding: 1em 0;
+}
+.logo{
+    margin-right: 1em;
+}
+/* this is for the two nav__lists to be one in one end an the other one in the other end */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    /* width 100% also works for this case similar using flex-grow:1 ; */
+    /* width: 100%; */
+    align-items: center;
+}
+/* this is for the items to be in one line */
+.nav__list{
+    /* width: 80%; */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    /* border: 2px solid red; */
+}
+.nav__list--primary{
+    margin: 0 auto;
+}
+/* this is to eleminate the space on the right after the last element in the nav (the signup button) */
+/* it selects the one and the one before it if it has it */
+.nav__item + .nav__item{
+    padding-left: 1em;
+}
+.nav__link{
+    color:#ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.nav__link--button{
+    background-color:#fff;
+    color: #136c72;
+    padding: .25em 1em;
+    border-radius: 10em;
+}
+.nav__item--push-right{
+    margin-left: auto;
+}
+.hero{
+    width:80%;
+    margin: 0 auto;
+    background-color: #23424a;
+    padding: 100px 0;
+    color: #ffffff;
+    /* border: solid 1px black; */
+    max-width: 1200px;
+}
+
+/* but if you use margin right, then if changing the width to 65%
+then you also need to change the margin-right to 5% 
+ but instead on the .row add justify-content to your flex.  it can 
+be justify-content: space-between, center */
+.hero__text{
+    width:53%;
+    line-height: 1.1;
+    /* margin-right: 10%; */
+    /* border: solid 1px blue; */
+}
+.hero__img{
+    width: 37%;
+    align-self: flex-start;
+    margin-top: 3em;
+}
+/* flex will take care of resizing images once they're part of the flex */
+/* i included align-items: center and caused problems for nav */
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.col{
+    width: 100%;
+}
+.col p{
+    padding-bottom: 3em;
+}
+/* another way to add space in between is using justify-content:
+space-between on the row, but reduce the width to be less than
+100% and the rest will be used in space in between*/
+.col + .col{
+    /* margin-left: 20px; */
+    background-color: #136c72;
+    text-align: center;
+}
+.hero p{
+    padding-bottom: 2.5em;
+}
+.btn{
+    padding: 1em 1em;
+    text-decoration: none;
+    background-color: mediumturquoise;
+    border-radius:3em;
+}
+
+.content-background{
+    background-color: #ffffff;
+}
+.content__text{
+    width: 53%;
+}
+.content__text h1{
+    color: #136c72;
+    font-family: Roboto Black;
+    font-size: 1.5rem;
+}
+.content__text p{
+    font-family: Roboto Regular;
+    font-size: 1rem;
+    color: #3a3a3a;
+}
+.content__rightpane{
+    width: 37%;
+}
+
+@media (max-width: 810px){
+    .row{
+        display: block;
+    }
+    .hero__text,
+    .hero__img,
+    .content__text,
+    .content__rightpane{
+        width: 100%;
+    }
+    .nav{
+        display: block;
+    }
+}

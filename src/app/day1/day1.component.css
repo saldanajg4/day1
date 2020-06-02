@@ -1,0 +1,35 @@
+/* box-sizing: border-box; */
+
+/* On the routing module I create and export a constant containing
+all the components to be used in app module.  Later in the app 
+module I add it to the declarations . Emmet documentation - https://docs.emmet.io/*/
+body{
+    margin: 0;
+}
+/* Em vs rem - https://youtu.be/_-aDOAMmDHI */
+/* padding 5em = 80 px.  Normally 16px is default font for most browsers.  So 
+16*5 = 80.  Use padding if you want more background space on bottom of text */
+.container{
+    background-color: cornflowerblue;
+    color: white;
+    padding: 5em;
+    margin: .5em;
+
+}
+.parent{
+    background-color: blue;
+    padding: 50px;
+    width: 80%;
+    margin: 0 auto; 
+    /* center in the page */
+}
+/* if you use height, then run into problems if text is greater */
+/* naturally our websites are responsive, don't use height */
+.child{
+    background-color: cadetblue;
+    display: inline-block;
+    width: 25%;
+    padding: 0px;
+    /* height: 250px; */
+}
+

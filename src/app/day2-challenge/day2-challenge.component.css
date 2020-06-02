@@ -1,0 +1,38 @@
+* { box-sizing: border-box; }
+
+body { 
+    margin: 0;
+    font-family: sans-serif;
+   
+} 
+
+.container {
+    width: 80%;
+    max-width: 850px;
+    margin: 0 auto;
+    /* keep them separate so they can be manipulated somwhere else */
+    /* and create background and color for each block */
+    /* background: #23424A; */
+    /* color: white; */
+    /* padding: 50px 0;  */
+    padding: 50px 7em;
+}
+
+.intro-content {
+    width: 50%;
+}
+
+.container-background{
+    background: #23424A;
+    color: white;
+    /* for the text */
+}
+.more-container-background{
+    background: #ffffff;
+    columns: #000000;
+    /* border: solid 1px black; */
+    /* for the text */
+}
+
+/* https://www.youtube.com/watch?v=IWFqGsXxJ1E
+for viewport  but there could be accessibility issues */

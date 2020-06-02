@@ -1,0 +1,164 @@
+
+/* start first media query maybe around 600px, to prevent lines from growing to much */
+/* from this size (small) to bigger user @media (min-width: 600px) */
+.container{
+    width: 90%;
+    margin: 0 auto;
+    /* this added for larger sizes, so lines won't grow in very large screens */
+    max-width: 1128px;
+    padding: 40px 0;
+}
+.centered{
+    text-align: center;
+}
+section{
+    padding:0px;
+    margin: 0px;
+}
+/* this under mobile first will not allow to overflow the image, keeping original size */
+/* this is so images does not get distorted */
+img{
+    max-width: 100%;
+    align-self: flex-start;
+}
+/* .hero__img{
+    width: 37%;
+    align-self: flex-start;
+} */
+h2{
+    font-size: 36px;
+    font-family: 'Playfair Display Black';
+    line-height: 1;
+}
+/* so if I use 660px as min-height then not centered but It will grow if it needs more than 660px in height */
+/* but we can make intro a flex then align-items: centered, top, bottom */
+.intro{
+    background-color: #F3EED9;
+    padding: 100px 0;
+    min-height: 660px;
+    display: flex;
+    align-items: center;
+}
+.intro__text-tiny{
+    font-family: 'Roboto Light';
+    font-size: 18px;
+    text-transform: uppercase;
+  
+}
+.intro__text-title{
+    font-family: 'Playfair Dispaly Black';
+    font-size: 48px;
+    line-height: 1;
+    color: #824936;
+}
+.section-two{
+    background-color: #ffffff;
+}
+.section__two-title{
+    font-family: 'Playfair Display Black';
+    color: #824936;
+}
+.section-three{
+    background-color: #222c2a;
+    color: #ffffff;
+}
+.section-four{
+    background-color: #824936;
+    color: #ffffff;
+}
+
+/* media queries start from small to 600px, write the following */
+ /* and this will convert 600px lines or more into flex items */
+ /* but if they are too narrow (5 words) then increase the num of px to 800 */
+ /* and since we have simple layout, one breakpoint will sufice */
+ /* Read the article before answer */
+@media (min-width: 800px){
+    .row{
+        display: flex;
+    }
+    .col{
+        /* or could use growing 1.this will keep equally aligned the cols */
+        width: 100%;
+    }
+    .col + .col{
+        margin-left: 4em;
+    }
+    .intro__text-title{
+        font-size: 3.75rem;
+    }
+}
+
+
+
+/* 
+.container{
+    width: 80%;
+    margin: 0 auto;
+   padding:0;
+    max-width: 1128px;
+}
+img{
+    max-width: 100%;
+}
+h2, h4{
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 900;
+    margin-top: 0;
+    line-height: 1.1;
+}
+section{
+    padding: 2em 0;
+}
+.intro{
+    padding: 200px 0;
+    background-color: #F3EED9;
+    text-align: center;
+    border: 2px solid black;
+}
+.intro__text-tiny{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.intro__text-header{
+    color: #824936;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    padding-top: 50px;
+}
+.intro__text-header-size{
+    font-size: 4rem;
+}
+.section-two{
+    background-color: #ffffff;
+    border: 2px solid red;
+}
+.section-two-text{
+  
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+}
+.section-three{
+    background-color: #222C2A;
+    color: #F3EED9;
+}
+
+.section-four{
+    background-color: #824936;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.col{
+    width: 100%;
+}
+
+.col + .col{
+    padding-left: 5em;
+}
+.centered{
+    margin: 0 auto;
+}
+ */

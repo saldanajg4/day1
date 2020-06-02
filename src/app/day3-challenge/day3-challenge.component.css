@@ -1,0 +1,53 @@
+/* it is better to user rem for font sizes and em for margins and 
+paddings.  If using em, then font size will grow compounded 
+to the parent's size.  em's references the parent of that font-size in padding
+and margins https://www.skillshare.com/*/
+.container{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 850px;
+    padding: 50px 3em;
+}
+.container-background{
+    background-color: #23424A;
+    color: #ffffff;
+}
+
+.container-intro{
+    width: 65%;
+}
+.content-intro{
+    padding-bottom: 2em;
+    font-size: 1.2rem;
+}
+.container-intro-color{
+    color: #add8e6;
+}
+.container-intro-background{
+    background-color: #ffffff;
+}
+.container-intro-padding{
+    padding:7em 3em;
+}
+.button{
+    background: #38CFD9;
+    text-align: center;
+    width: 30%;
+    min-width: 150px;
+    /* mix-blend-mode: normal; */
+    border-radius: 30px;
+    padding:1em;
+}
+.button-font{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size:1rem;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #072a2d;
+}
+a:link{
+    text-decoration: none;
+}

@@ -1,0 +1,82 @@
+.container{
+    width: 80%;
+    max-width: 850px;
+    margin:0 auto;
+    padding: 3em;
+}
+/* introducting row for flex */
+.row{
+    /* display: flex => flex container */
+    display: flex;
+
+    /* default = row */
+    flex-direction: row;
+
+    /* cannot use yet */
+    /* gap: 100px; */
+}
+/* because child items display to the smallest possible width.  but if you want 
+to make them equally then give them a width */
+.col{
+    /* background-color: limegreen; */
+    /* margin:10px; */
+    width:100%;
+    text-align: center;
+}
+/* applied to flex items */
+.col + .col{
+    margin-left: 2em;
+}
+.container-intro-background{
+    background-color: #23424a;
+}
+
+.header-intro h2{
+    color: purple;
+}
+/* .header-third h2, .header-third p{
+    color: #ffffff;
+} */
+
+.content-intro-background{
+    background-color: #ffffff;
+    padding: 2em 3em;
+}
+/* .content-third-background{
+    background-color: rgb(23, 82, 87);
+} */
+.contnet-intro{
+    width: 60%;
+    color: #ffffff;
+    padding-bottom: 1.5em;
+}
+.container__text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+div h1{
+    color: #ffffff;
+}
+p{
+    padding-bottom: 2em;
+}
+/* .three-col{
+    padding: 3em 0;
+} */
+.two-col{
+    background-color: #136c72;
+    color: #ffffff;
+}
+.button{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #38cfd9;
+    width: 25%;
+    min-width:150px;
+    text-align: center;
+    border-radius: 100px;
+    padding:.25em 1em;
+}
+.button:hover, .button:focus{
+    opacity: .75;
+}
