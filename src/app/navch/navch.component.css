@@ -115,17 +115,14 @@ header {
 .hamburger::after {
     transform: translateY(3px);
 }
-
-/* made changes here from video
-   to make it more accessible.
-   
-   Works the same :) */
+/*since .nav is the parent, then include the postion absolute for children*/
 .nav {
     visibility: hidden;
     height: 0;
     position: absolute;
 }
 
+/*if position relative is not specified, then the list items will be shown as overflow show*/
 .nav--visible {
     visibility: visible;
     height: auto;
