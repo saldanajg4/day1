@@ -14,6 +14,7 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { Ch4Component } from './ch4/ch4.component';
 import { Day10Component } from './day10/day10.component';
 import { NavchComponent } from './navch/navch.component';
+import { ReduxEx1Component } from './redux-ex1/redux-ex1.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NavchComponent } from './navch/navch.component';
     Swiper2Component,
     Ch4Component,
     Day10Component,
-    NavchComponent
+    NavchComponent,
+    ReduxEx1Component
   ],
   imports: [
     BrowserModule,

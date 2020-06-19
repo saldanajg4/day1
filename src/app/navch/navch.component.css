@@ -129,7 +129,7 @@ header {
 .nav--visible {
     visibility: visible;
     height: auto;
-    position: relative;
+    /* position: relative; */
 } 
 .nav__item{
     margin-top: .5em;

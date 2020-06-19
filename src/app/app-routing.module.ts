@@ -11,6 +11,7 @@ import { Swiper2Component } from './swiper2/swiper2.component';
 import { Ch4Component } from './ch4/ch4.component';
 import { Day10Component } from './day10/day10.component';
 import { NavchComponent } from './navch/navch.component';
+import { ReduxEx1Component } from './redux-ex1/redux-ex1.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'swiper2', component: Swiper2Component },
   { path: 'ch4', component: Ch4Component},
   { path: 'day10', component: Day10Component},
-  { path: 'navch', component: NavchComponent}
+  { path: 'navch', component: NavchComponent},
+  { path: 'redux', component: ReduxEx1Component}
 ];
 
 @NgModule({
